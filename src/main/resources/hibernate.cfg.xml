@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Connection to the database -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <!-- <property name="connection.url">jdbc:postgresql://localhost:5432/supershop</property> -->
+        <property name="connection.url">jdbc:postgresql://ec2-3-233-174-23.compute-1.amazonaws.com:5432/demrbfr3ac9vqq</property>
+        <!-- Credentials -->
+        <property name="connection.username">pmhrvsjkzpuoun</property>
+        <property name="connection.password">4619c788b64671aeca805bf0b23849c9efe861953389683b6b84fdaddf1bddd9</property>
+        
+        <!-- JDBC connection pool (c3p0) -->
+        <property name="hibernate.c3p0.min_size">0</property>
+        <property name="hibernate.c3p0.max_size">10</property>
+        <property name="hibernate.c3p0.timeout">1800</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+    
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+       
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+    
+        <!--<property name="show_sql">true</property>-->
+    
+        <property name="hbm2dll.create_namespaces">true</property>
+        <!--<property name="hbm2ddl.auto">create</property>-->
+        <property name="hbm2ddl.auto">update</property>
+        
+        <!-- Contexto de la sesion -->
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+       
+        <!-- mapeo -->
+        <mapping class="grupo1.supershop.beans.Actividad"/>
+        <mapping class="grupo1.supershop.beans.AdministradorSistema"/>
+        <mapping class="grupo1.supershop.beans.AdministradorSucursal"/>
+        <mapping class="grupo1.supershop.beans.Archivo"/>
+        <mapping class="grupo1.supershop.beans.AtencionCliente"/>
+        <mapping class="grupo1.supershop.beans.Carrito"/>
+        <mapping class="grupo1.supershop.beans.CarritoProducto"/>
+        <mapping class="grupo1.supershop.beans.Categoria"/>
+        <mapping class="grupo1.supershop.beans.Compra"/>
+        <mapping class="grupo1.supershop.beans.CompraProducto"/>
+        <mapping class="grupo1.supershop.beans.CompraDomicilio"/>
+        <mapping class="grupo1.supershop.beans.CompraSucursal"/>
+        <mapping class="grupo1.supershop.beans.Comprador"/>
+        <mapping class="grupo1.supershop.beans.Conversacion"/>
+        <mapping class="grupo1.supershop.beans.Domicilio"/>
+        <mapping class="grupo1.supershop.beans.Mensaje"/>
+        <mapping class="grupo1.supershop.beans.MetodoEnvio"/>
+        <mapping class="grupo1.supershop.beans.Producto"/>
+        <mapping class="grupo1.supershop.beans.Promocion"/>
+        <mapping class="grupo1.supershop.beans.Reclamo"/>
+        <mapping class="grupo1.supershop.beans.ServidorCorreo"/>
+        <mapping class="grupo1.supershop.beans.Sesion"/>
+        <mapping class="grupo1.supershop.beans.Stock"/>
+        <mapping class="grupo1.supershop.beans.Sucursal"/>
+        <mapping class="grupo1.supershop.beans.Usuario"/>
+        <mapping class="grupo1.supershop.beans.UsuarioSucursal"/>
+        <mapping class="grupo1.supershop.beans.Vale"/>
+        
+    </session-factory>
+</hibernate-configuration>
