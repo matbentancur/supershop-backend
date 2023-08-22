@@ -5,11 +5,10 @@
 
         <!-- Connection to the database -->
         <property name="connection.driver_class">org.postgresql.Driver</property>
-        <!-- <property name="connection.url">jdbc:postgresql://localhost:5432/supershop</property> -->
-        <property name="connection.url">jdbc:postgresql://ec2-3-233-174-23.compute-1.amazonaws.com:5432/demrbfr3ac9vqq</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/supershop</property>
         <!-- Credentials -->
-        <property name="connection.username">pmhrvsjkzpuoun</property>
-        <property name="connection.password">4619c788b64671aeca805bf0b23849c9efe861953389683b6b84fdaddf1bddd9</property>
+        <property name="connection.username">supershop</property>
+        <property name="connection.password">supershop</property>
         
         <!-- JDBC connection pool (c3p0) -->
         <property name="hibernate.c3p0.min_size">0</property>
